@@ -1,0 +1,57 @@
+% Beamer theme by antonio vergari <arranger1044[aT]aim[DoT]com>
+% based on the LaTeX-Beamer package
+% Part of the beamer theme enziteto (previously known as lacamlisciotheme)
+% 
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 3.
+%
+% 
+\ProvidesPackage{beamercolorthemegallinule}[2015/06/02]
+
+
+%
+% custom colors
+\definecolor{lacamlilac} {RGB} {107,93,153}
+\definecolor{lacamlilac2} {RGB} {93, 109, 152}
+\definecolor{lacamlightlilac} {RGB} {174, 166, 201}
+\definecolor{lacamdarklilac} {RGB} {51, 10, 102}
+\definecolor{lacamgold} {RGB} {255, 87, 0}
+
+%
+% defining palettes
+\setbeamercolor{palette primary} {fg=black, bg=white}
+\setbeamercolor{palette secondary} {fg=lacamlilac, bg=white}
+\setbeamercolor{palette tertiary} {fg=lacamdarklilac, bg=white}
+\setbeamercolor{palette quaternary} {fg=lacamlightlilac, bg=white}
+
+%
+% coloring
+\setbeamercolor{background canvas}{parent=palette primary}
+
+\setbeamercolor{structure} {fg=black, bg=white}
+
+\setbeamercolor{title} {parent=structure}
+%\setbeamercolor{title page} {parent=structure}
+
+\setbeamercolor{subtitle} {parent=title}
+
+% \setbeamercolor{frametitle} {parent=palette secondary}
+\setbeamercolor{frametitle} {parent=palette tertiary}
+
+\setbeamercolor{mini frame}{parent=palette secondary}
+
+\setbeamercolor{section in head/foot} {parent=palette tertiary}
+\setbeamercolor{section page} {parent=palette tertiary}
+
+\setbeamercolor{alerted text}{fg=lacamgold!40!lacamlilac}
+
+\setbeamercolor{example text}{fg=lacamdarklilac!40!lacamgold}
+
+\setbeamercolor{block title} {fg=structure.fg, bg=lacamlightlilac}
+\setbeamercolor{block title alerted} {fg=alerted text.fg, bg=alerted text.fg!10!bg}
+\setbeamercolor{block title example} {fg=example text.fg, bg=example text.fg!10!bg}
+
+\setbeamercolor{block body} {fg=normal text.fg, bg=white}
+\setbeamercolor{block body alerted} {fg=normal text.fg, bg=alerted text.fg!10!bg}
+\setbeamercolor{block body example} {fg=normal text.fg, bg=example text.fg!10!bg}
+

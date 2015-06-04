@@ -1,0 +1,154 @@
+% 
+% Beamer theme by antonio vergari <arranger1044[aT]aim[DoT]com>
+% based on the LaTeX-Beamer package
+% Part of the beamer theme enziteto (previously known as lacamlisciotheme)
+% 
+% This program can be redistributed and/or modified under the terms
+% of the GNU Public License, version 3.
+% 
+% 
+\ProvidesPackage{beamerinnerthemeenziteto}[2015/06/02]
+
+%
+% is this needed?
+\usepackage{biblatex}
+
+\mode<presentation>
+
+
+\defbeamertemplate*{title page}{enziteto}[1][]
+{
+  \begin{minipage}[t]{0.1\linewidth}
+    \vspace{0pt}
+    % \includegraphics[width=25pt]{Figures/unibaba}
+    \ifdefined\@institutelogo
+    \@institutelogo
+    \fi
+  \end{minipage}
+  \begin{minipage}[t]{0.28\linewidth}
+    \vspace{7pt}
+    \flushleft
+    {\usebeamerfont{institute}\insertinstitute\par}
+    \vspace{2pt}
+    \tiny\@department
+  \end{minipage}
+  \ifdefined\@laboratory
+    \hspace{20pt}
+    \begin{minipage}[t]{0.12\linewidth}
+      \vspace{0pt}
+      \ifdefined\@lablogo
+      \@lablogo
+      \else
+      \hspace{10pt}
+      \fi
+    \end{minipage}
+    \begin{minipage}[t]{0.40\linewidth}
+      \vspace{7pt}
+      \flushleft
+      \tiny\textbf{\@laboratory}\par
+      \vspace{2pt}
+      \@group
+     \end{minipage}
+     \par
+  \fi
+  \vspace{15pt}
+  
+  \Large\usebeamerfont{title}\usebeamercolor{title page}\inserttitle\par%\textcolor{lacamlilac}{\inserttitle}\par
+  \vspace{5pt}
+  \small\usebeamerfont{subtitle}\textcolor{lacamlilac}{\insertsubtitle}\par
+  \vspace{15pt}
+  \usebeamerfont{author}\insertauthor\par
+
+  \ifdefined\@gliph
+  \vspace{7pt}
+  \@gliph\par
+  \vspace{7pt}
+  \else
+  \vspace{21pt}
+  \fi
+  \usebeamerfont{date}\insertdate\par
+  
+}
+
+\defbeamertemplate*{section page}{lacamliscio}[1][]{%
+  \begin{centering}
+    {\usebeamerfont{section name}
+      %\textcolor{lacamdarklilac}{\insertsection}
+      \insertsection
+    % \vskip1em\par
+    % \begin{beamercolorbox}[sep=12pt,center]{part title}
+    %   \usebeamerfont{section title}\insertsection\par
+    % \end{beamercolorbox}
+    % \insertsection
+    }
+  \end{centering}
+}
+
+%
+% FOOTNOTES
+%
+
+%\renewcommand{\footnotesize}{\scriptsize}
+% baed on default footnote template from beamerinnerthemedefault.sty
+\defbeamertemplate*{footnotetext}{lacamliscio}{%
+  % \parindent 1em\noindent%
+  \raggedright
+  \tiny
+  % \hbox to 1.8em{\hfil\insertfootnotemark}%
+  \insertfootnotetext\par}
+
+% based on default footnote template from beamerinnerthemedefault.sty
+\defbeamertemplate*{footnotetextmark}{lacamliscio}{%
+  % \parindent 1em\noindent%
+  \raggedright
+  \tiny
+  % \hbox to 1.8em{\hfil\insertfootnotemark}
+  \makebox[0cm][l]{\insertfootnotemark}\insertfootnotetext\par}
+
+%\insertfootnotemark~\insertfootnotetext\par}
+\newrobustcmd*{\footfullcitenomarkleft}{%
+  \AtNextCite{%
+    \setbeamertemplate{footnote}{\usebeamertemplate{footnotetext}}%
+    \let\mkbibfootnote\mkbibfootnotetext}%
+  \footfullcite}
+\newrobustcmd*{\footfullcitenomark}{%
+  \AtNextCite{%
+    \let\thefootnote\relax
+    \let\mkbibfootnote\mkbibfootnotetext}%
+  \footfullcite}
+\newrobustcmd*{\footfullciteleft}{%
+  \AtNextCite{%
+    \setbeamertemplate{footnote}{\usebeamertemplate{footnotetextmark}}%
+    \let\mkbibfootnote\mkbibfootnotetext}%
+  \footfullcite}
+\newrobustcmd*{\footnotenomarkleft}{%
+   \setbeamertemplate{footnote}{\usebeamertemplate{footnotetext}}%
+    \let\mkbibfootnote\mkbibfootnotetext
+   \footnotetext}
+%
+% better spacing for footnotes
+\def \beamerfoottmplength {0.92\paperwidth}
+\addtobeamertemplate{footnotetext}{\vspace{-6pt}\advance\hsize-1.5cm}{\vspace{6pt}}
+\addtobeamertemplate{footnote}{\vspace{-6pt}\advance\hsize-1.5cm}{\vspace{6pt}}
+\addtobeamertemplate{footnote}{\hsize\beamerfoottmplength}{}
+\addtobeamertemplate{footnotetext}{\hsize\beamerfoottmplength}{}
+
+
+\makeatletter
+% Alternative A: footnote rule
+\renewcommand*{\footnoterule}{\kern -3pt \hrule \@width 2in \kern 8.6pt}
+% Alternative B: no footnote rule
+% \renewcommand*{\footnoterule}{\kern 6pt}
+\makeatother
+
+
+%
+% references enclosed in brackets
+\makeatletter
+\AtEveryCite{%
+\let\bibopenparen=\bibopenbracket%
+  \let\bibcloseparen=\bibclosebracket}
+\makeatother
+
+\mode
+<all>
