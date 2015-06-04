@@ -1,0 +1,172 @@
+
+  % It is the embodiment of an intelligent agent system.\par\bigskip
+  % It is both a view of what cognition is and an implementation of that
+  % view through a programming architecture for AI modeling different aspects of human
+  % behavior.\par\bigskip
+  % It is based on a production system, it uses explicit \textbf{production
+  %   rules} to govern its behavior. An example rule to model plan intentions\footnote{\url{http://people.ict.usc.edu/~traum/Talks/ict-dm-tutorial5.pdf}}:
+  % {\tiny
+% \begin{verbatim}
+% sp {top-ps*elaborate*task*belief*intend*true
+%    (state <s> ^problem-space.name top-ps ^agent-name <me> ^plan <task>)
+%    (<task> ^intend true ^responsibility <me> ^authorized yes)
+% -->
+%    (<task> ^belief true)
+% }
+% \end{verbatim}}
+  \end{frame}
+
+
+  \begin{frame}
+    \frametitle{Rule based Game AIs}
+    \begin{center}
+      \includegraphics[width=1.0\textwidth]{Figures/aokii-crop}
+    \end{center}
+    \footnotenomarkleft{[2000] \href{http://cobweb.cs.uga.edu/~potter/aok/}{Microsoft - Age of Empires II: Age of Kings}}
+  \end{frame}
+
+  \section{Resources}
+  {\setbeamertemplate{headline}{}
+    \begin{frame}
+      \sectionpage
+    \end{frame}
+  }
+
+  \begin{frame}
+    \frametitle{Books}
+    Please do not study from these slides.\par\bigskip
+
+
+    \textbf{Expert Systems: Principles and Programming}\\
+    \emph{J. Giarratano \& G. Riley}. Course Technology. \emph{4th
+      Edition}. 2004.\\
+    From the programmers of CLIPS, useful and general enough to get
+    confidence with the language.
+    \begin{flushright}
+      \vspace{-5pt}
+      \emph{Chapters 6-10, 12}
+    \end{flushright}
+
+
+
+    \textbf{Introduction to Expert Systems}\\
+    \emph{Peter Jackson}. Addison-Wesley. \emph{Third Edition}. 1998.\\
+    Less CLIPS-centric, but heavier on expert system design and
+    implementation issues. It will come handy for the exam.
+    \begin{flushright}
+      \vspace{-5pt}
+      Chapters 10-12, 16-17
+    \end{flushright}
+
+
+  \end{frame}
+
+  \begin{frame}
+
+    \frametitle{CLIPS Programming}
+
+    Assuming version \textsf{6.30}, there are equivalent for versione \textsf{6.24}.\par\bigskip
+
+
+    \textbf{CLIPS User's Guide}\\
+    Most of the basic arguments we will face can be found in this
+    tutorial. A must.
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{http://clipsrules.sourceforge.net/documentation/v630/ug.pdf}{documentation/v630/ug.pdf}
+    \end{flushright}
+
+
+
+    \textbf{CLIPS Basic Programming Guide}\\
+    It contains the documentation and examples for each shell and
+    language construct.
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{http://clipsrules.sourceforge.net/documentation/v630/bpg.pdf}{documentation/v630/bpg.pdf}
+    \end{flushright}
+
+
+    \textbf{CLIPS Advanced Programming Guide}\\
+    Explaining in depth the source code, the modules functioning and how to use CLIPS APIs from a wrapper program (in C).
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{http://clipsrules.sourceforge.net/documentation/v630/apg.pdf}{documentation/v360/apg.pdf}
+    \end{flushright}
+
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{CLIPS Programming}
+    Projects for embedding CLIPS into external
+    frameworks. Beware outdated software.\par\bigskip
+
+    \textbf{clipsmm}\\
+    C++ wrapper of CLIPS C APIs.
+    \begin{flushright}
+      \vspace{-20pt}
+      \href{http://clipsmm.sourceforge.net/}{clipsmm@sourceforge}
+    \end{flushright}
+    \textbf{CLIPSnet}\\
+    Embedding CLIPS in to .NET applications (bleargh).
+    \begin{flushright}
+      \vspace{-20pt}
+      \href{http://sourceforge.net/projects/clipsnet/}{clipsnet@sourceforge}
+    \end{flushright}
+    \textbf{DROID-CLIPS}\\
+    Porting CLIPS to Android.
+    \begin{flushright}
+      \vspace{-20pt}
+      \href{https://github.com/DrItanium/DROID-CLIPS}{droid-clips@github}
+    \end{flushright}
+    \textbf{pyCLIPS}\\
+    Python 2.X wrapper.
+    \begin{flushright}
+      \vspace{-20pt}
+      \href{http://pyclips.sourceforge.net/web/}{pyclips@sourceforge}
+    \end{flushright}
+    \textbf{CLIPS JNI 0.4}\\
+    Official Java Native Interface for CLIPS. We'll use it later in the course.
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{http://clipsrules.sourceforge.net/CLIPSJNIBeta.html}{CLIPS-JNI@sourceforge}
+    \end{flushright}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Additional Resources}
+
+    \textbf{CLIPS Forum}\\
+    Sourceforge project discussion boards
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{http://sourceforge.net/p/clipsrules/discussion/}{CLIPS@sourceforge}
+    \end{flushright}
+
+
+    \textbf{CLIPSESG}\\
+    CLIPS Expert System Group, a much more updated forum for users to
+    ask for help and interact.
+    \begin{flushright}
+      \vspace{-5pt}
+      \href{https://groups.google.com/forum/\#!forum/CLIPSESG}{CLIPSESG@googlegroups}
+    \end{flushright}
+
+  \end{frame}
+
+  \section{Exam}
+  {\setbeamertemplate{headline}{}
+    \begin{frame}
+      \sectionpage
+    \end{frame}
+  }
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-engine: xetex
+%%% TeX-master: t
+%%% End:
