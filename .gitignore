@@ -7,4 +7,6 @@
 *.bcf
 *.snm
 *.toc
-*.vbr
+*.vrb
+*.run.xml
+
