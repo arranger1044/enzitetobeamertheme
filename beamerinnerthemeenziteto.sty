@@ -30,7 +30,9 @@
     \flushleft
     {\usebeamerfont{institute}\insertinstitute\par}
     \vspace{2pt}
+    \ifdefined\@department
     \tiny\@department
+    \fi
   \end{minipage}
   \ifdefined\@laboratory
     \hspace{20pt}
@@ -45,9 +47,12 @@
     \begin{minipage}[t]{0.40\linewidth}
       \vspace{7pt}
       \flushleft
+      \@laboratory
       \tiny\textbf{\@laboratory}\par
       \vspace{2pt}
+      \ifdefined\@group
       \@group
+      \fi
      \end{minipage}
      \par
   \fi
